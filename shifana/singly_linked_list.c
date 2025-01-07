@@ -156,7 +156,7 @@ void delete_anywhere(){
 void main(){
         int ch;
         do{
-                printf("\n Menu \n 1.Insert at beginning \n 2.Insert at any position \n 3.Insert at end \n 4.Search \n 5.Delete from beginnin>
+                printf("\n Menu \n 1.Insert at beginning \n 2.Insert at any position \n 3.Insert at end \n 4.Search \n 5.Delete from beginning \n 6. Delete from End \n 7. Delete from any position \n 8. Display \n 9.Exit
                 printf("\n Enter your choice:");
                 scanf("%d",&ch);
                 switch(ch){
