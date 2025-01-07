@@ -33,7 +33,6 @@ void pop()
                 temp=top;
                 top=temp->next;
                 free(temp);
-                temp=NULL;
         }
         printf("Element deleted successfully\n");
 }
