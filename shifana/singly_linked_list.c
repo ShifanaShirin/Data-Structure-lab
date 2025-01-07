@@ -128,30 +128,32 @@ void delete_end(){
         }
 }
 void delete_anywhere(){
-        int p;
-        if(head==NULL)
-                printf("\n List is empty");
-        else{
-                printf("\n Enter the position to be deleted:");
-                scanf("%d",&p);
-                struct node *temp=head;
-                struct node *prev=NULL;
-                if(p<1)
-                        printf("\n Invalid");
-                else if(p==1)
-                        delete_begin();
-                else{
-                        for(int i=1;i<p&&temp!=NULL;i++){
-                                prev=temp;
-                                temp=temp->next;
-                                if(temp==NULL)
-                                        printf("\n Position not found");
-                                prev->next=temp->next;
-                                free(temp);
-                        }
-                        display();
-                }
-        }
+        struct node*temp=head;
+       if(temp==NULL)
+		printf("List is Empty\n");
+	else
+	{
+	struct node*temp=head;
+	int pos;
+	printf("Enter the position from which the element to be deleted: ");
+	scanf("%d",&pos);
+	if (pos<1)
+		printf("Invalid position\n");
+	else if(pos==1)
+		delete_begin();
+	else
+	{
+	struct node*prev=NULL;
+	for(int i=1;i<pos && temp!=NULL;i++)
+	{
+		prev=temp;
+		temp=temp->next;
+	}
+	prev->next=temp->next;
+	free(temp);
+	printf("Successfully deleted the element at the specified position\n");
+	}
+	}
 }
 void main(){
         int ch;
