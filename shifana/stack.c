@@ -17,7 +17,6 @@ void push(int value)
 {
         struct node*newnode=(struct node*) malloc(sizeof(struct node));
         newnode->data=value;
-        newnode->next=NULL;
         newnode->next=top;
         top=newnode;
         printf("Element Inserted Successfull\n");
