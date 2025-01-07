@@ -49,8 +49,7 @@ int peek()
 }
 void display()
 {
-        struct node*temp;
-        temp=top;
+        struct node*temp=top;
         if(isEmpty())
         {
                 printf("Stack Underflow\n");
@@ -67,8 +66,7 @@ void display()
 }
 void search()
 {
-        struct node*temp;
-        temp=top;
+        struct node*temp=top;
         int found=0;
         int value;
         if (isEmpty())
