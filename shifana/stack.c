@@ -24,7 +24,6 @@ void push(int value)
 void pop()
 {
         struct node*temp;
-        int value;
         if (isEmpty())
         {
                 printf("Stack Underflow!!\n");
@@ -32,7 +31,6 @@ void pop()
         else
         {
                 temp=top;
-                value=temp->data;
                 top=temp->next;
                 free(temp);
                 temp=NULL;
